@@ -106,7 +106,6 @@ document.addEventListener(
   false
 );
 
-// Gestion des événements tactiles pour les appareils mobiles
 document.addEventListener(
   "touchstart",
   function (event) {
@@ -151,15 +150,21 @@ document.addEventListener(
 );
 
 let clickCount = 0;
-
 function checkOrder() {
   clickCount++;
   let cards = document.querySelectorAll(".card");
+  let lines = document.querySelectorAll(".line");
   let errors = 0;
   for (let i = 0; i < cards.length; i++) {
+    let numb = lines[i].querySelector(".numb");
+    console.log(numb);
     if (cards[i].innerHTML != data[i].element) {
       errors++;
+      numb.style.setProperty("background-color", "red", "important");
+    } else {
+      numb.style.setProperty("background-color", "", "important");
     }
+    console.log(numb.style.backgroundColor);
   }
 
   if (errors === 0) {

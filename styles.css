@@ -62,7 +62,7 @@ body {
   text-align: center;
   margin-bottom: 8px;
   border-radius: 8px;
-  background-color: #e34069;
+  /* background-color: #e34069; */
   border: 1px solid #0c0c0c;
   display: flex;
   align-items: center;
@@ -75,9 +75,9 @@ body {
   margin-right: 8px;
   justify-content: center;
   height: 42px;
-  background: url("https://3fansite.fr/3Fan/back-banner.jpg");
-  background-attachment: fixed;
-  background-size: cover;
+  /* background: url("https://3fansite.fr/3Fan/back-banner.jpg"); */
+  /* background-attachment: fixed; */
+  /* background-size: cover; */
 }
 
 #contain .line {
@@ -106,4 +106,12 @@ body {
   font-weight: normal;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.contain .numb .error {
+  background-color: red !important;
+}
+
+.card.highlight {
+  border: 2px solid yellow;
 }
