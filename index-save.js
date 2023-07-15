@@ -39,6 +39,7 @@ let data = [
     element: "Bon voyage",
   },
 ];
+
 function shuffle(array) {
   let shuffledArray = [...array];
   let currentIndex = shuffledArray.length,
@@ -65,7 +66,6 @@ for (let i = 0; i < cards.length; i++) {
 
 let dragged;
 
-// Gestion des événements de glisser-déposer pour les ordinateurs de bureau
 document.addEventListener(
   "dragstart",
   function (event) {
@@ -97,50 +97,6 @@ document.addEventListener(
   "drop",
   function (event) {
     event.preventDefault();
-    if (event.target.className === "card") {
-      let targetContent = event.target.innerHTML;
-      event.target.innerHTML = dragged.innerHTML;
-      dragged.innerHTML = targetContent;
-    }
-  },
-  false
-);
-
-// Gestion des événements tactiles pour les appareils mobiles
-document.addEventListener(
-  "touchstart",
-  function (event) {
-    if (event.target.className === "card") {
-      dragged = event.target;
-      event.target.style.opacity = 0.5;
-    }
-  },
-  false
-);
-
-document.addEventListener(
-  "touchend",
-  function (event) {
-    if (event.target.className === "card") {
-      event.target.style.opacity = "";
-    }
-  },
-  false
-);
-
-document.addEventListener(
-  "touchmove",
-  function (event) {
-    if (event.target.className === "card") {
-      event.preventDefault();
-    }
-  },
-  false
-);
-
-document.addEventListener(
-  "touchend",
-  function (event) {
     if (event.target.className === "card") {
       let targetContent = event.target.innerHTML;
       event.target.innerHTML = dragged.innerHTML;
