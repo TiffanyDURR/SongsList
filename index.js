@@ -6,7 +6,7 @@ let data = [
     element: "Reviens",
   },
   {
-    element: "On la tire içi",
+    element: "On la tire ici",
   },
   {
     element: "Elle danse",
