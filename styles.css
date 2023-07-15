@@ -57,13 +57,13 @@ body {
   height: 42px;
 }
 
-#contain .numb {
+.numb {
   width: 60px;
   text-align: center;
   margin-bottom: 8px;
   border-radius: 8px;
-  /* background-color: #e34069; */
-  border: 1px solid #0c0c0c;
+  background-color: #e34069;
+  border: 1px solid #000000;
   display: flex;
   align-items: center;
   font-family: "Oswald", sans-serif;
@@ -75,9 +75,9 @@ body {
   margin-right: 8px;
   justify-content: center;
   height: 42px;
-  /* background: url("https://3fansite.fr/3Fan/back-banner.jpg"); */
-  /* background-attachment: fixed; */
-  /* background-size: cover; */
+  background: url("https://3fansite.fr/3Fan/back-banner.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #contain .line {

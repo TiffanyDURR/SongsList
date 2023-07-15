@@ -160,9 +160,9 @@ function checkOrder() {
     console.log(numb);
     if (cards[i].innerHTML != data[i].element) {
       errors++;
-      numb.style.setProperty("background-color", "red", "important");
+      numb.style.setProperty("border", "1px solid red", "important");
     } else {
-      numb.style.setProperty("background-color", "", "important");
+      numb.style.setProperty("border", "1px solid black", "important");
     }
     console.log(numb.style.backgroundColor);
   }
