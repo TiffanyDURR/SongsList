@@ -9,7 +9,9 @@
   </head>
   <body>
     <div id="contain">
-      <div id="contain">
+      <div class="cards">
+        <h1>V</h1>
+        <p>Retrouver l'ordre des titres de l'album "V"</p>
         <div class="line">
           <div class="numb">#01</div>
           <div class="card" draggable="true"></div>
@@ -62,10 +64,46 @@
           <div class="numb">#13</div>
           <div class="card" draggable="true"></div>
         </div>
+
+        <div id="win"></div>
+        <div id="errors"></div>
+        <div id="try"></div>
+        <div id="result"></div>
+        <div id="validate" onclick="checkOrder()">Valider</div>
+        <div id="replay" onclick="replay()" style="display: none">Rejouer</div>
+      </div>
+      <div class="albums">
+        <div class="album">
+          <img
+            src="https://3fansite.fr/3Fan/assets/disco/albums/cd01.jpg"
+            alt="Album"
+          />
+        </div>
+        <div class="album">
+          <img
+            src="https://3fansite.fr/3Fan/assets/disco/albums/cd03.jpg"
+            alt="Album"
+          />
+        </div>
+        <div class="album">
+          <img
+            src="https://3fansite.fr/3Fan/assets/disco/albums/cd05.jpg"
+            alt="Album"
+          />
+        </div>
+        <div class="album">
+          <img
+            src="https://3fansite.fr/3Fan/assets/disco/albums/cd06.jpg"
+            alt="Album"
+          />
+        </div>
+        <div class="album">
+          <img
+            src="https://3fansite.fr/3Fan/assets/disco/albums/cd08.jpg"
+            alt="Album"
+          />
+        </div>
       </div>
     </div>
-    <div id="result"></div>
-    <div id="validate" onclick="checkOrder()">Valider</div>
-    <div id="replay" onclick="replay()" style="display: none">Rejouer</div>
   </body>
 </html>

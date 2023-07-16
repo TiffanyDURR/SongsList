@@ -65,7 +65,6 @@ for (let i = 0; i < cards.length; i++) {
 
 let dragged;
 
-// Gestion des événements de glisser-déposer pour les ordinateurs de bureau
 document.addEventListener(
   "dragstart",
   function (event) {
@@ -167,14 +166,30 @@ function checkOrder() {
     console.log(numb.style.backgroundColor);
   }
 
+  let errorsDIV = document.querySelector("#errors");
+  let tryDIV = document.querySelector("#try");
+  let winDIV = document.querySelector("#win");
   if (errors === 0) {
-    alert("Gagné!");
-    document.querySelector("#result").innerHTML =
-      "Nombre de clics: " + clickCount;
     document.querySelector("#validate").style.display = "none";
     document.querySelector("#replay").style.display = "block";
+    if (clickCount == 1) {
+      tryDIV.innerHTML = `${clickCount} essai`;
+    } else {
+      tryDIV.innerHTML = `${clickCount} essais`;
+    }
+    errorsDIV.innerHTML = ``;
+    winDIV.innerHTML = "Gagné !";
   } else {
-    alert("Il y a " + errors + " erreurs.");
+    if (errors == 1) {
+      errorsDIV.innerHTML = `Il y a ${errors} erreur`;
+    } else {
+      errorsDIV.innerHTML = `Il y a ${errors} erreurs`;
+    }
+    if (clickCount == 1) {
+      tryDIV.innerHTML = `${clickCount} essai`;
+    } else {
+      tryDIV.innerHTML = `${clickCount} essais`;
+    }
   }
 }
 
